@@ -74,31 +74,62 @@ fetch('http://localhost:9292/products')
         "id": 1,
         "productName": "Lux White and Teal Lamp Shade",
         "price": 999,
-        "productImage": "https://media.istockphoto.com/id/1270753183/photo/table-lamp-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=kg5jUP0ZLsn7k6DC2orrADuGKJFFv18so5H_AiPH2Lk="
+        "productImage": "https://media.istockphoto.com/id/1270753183/photo/table-lamp-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=kg5jUP0ZLsn7k6DC2orrADuGKJFFv18so5H_AiPH2Lk=",
+        "reviews": [
+            {
+                "id": 2,
+                "star_rating": 5,
+                "title": "Great items",
+                "comment": "Consequatur doloribus eligendi dicta.",
+                "product_id": 1,
+                "created_at": "2023-03-01T02:19:42.411Z",
+                "updated_at": "2023-03-01T02:22:25.346Z"
+            },
+            {
+                "id": 6,
+                "star_rating": 4,
+                "title": "Great Online Support ",
+                "comment": "Earum quam tempora illum.",
+                "product_id": 1,
+                "created_at": "2023-03-01T02:19:42.621Z",
+                "updated_at": "2023-03-01T03:17:11.968Z"
+            },
+            {
+                "id": 14,
+                "star_rating": 4,
+                "title": "Great customer service",
+                "comment": "Amazing store. The products are great quality and value. Ordering was a breeze and fast shipping.",
+                "product_id": 1,
+                "created_at": "2023-03-01T05:55:32.311Z",
+                "updated_at": "2023-03-01T05:55:32.311Z"
+            }
+        ]
     },
     {
         "id": 2,
         "productName": "Mid-Century Cosy Wingback ArmChair",
         "price": 599,
-        "productImage": "https://media.istockphoto.com/id/1321320075/photo/3d-rendering-of-an-isolated-modern-pale-green-mid-century-cosy-lounge-wingback-armchair.jpg?b=1&s=170667a&w=0&k=20&c=DnhYZHHNh09-MtUA3vLrpV3zqhgJPU1vjOgeRREjsls="
-    },
-    {
-        "id": 3,
-        "productName": "Mini indoor plants",
-        "price": 99,
-        "productImage": "https://media.istockphoto.com/id/1368776589/photo/beautiful-artificial-plants-decorations-in-white-pots-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=fZLc6NZsoiJifpJXxNF5MYB5y3F-s9mfdj9gHqiOLsk="
-    },
-    {
-        "id": 4,
-        "productName": "14 Ft Artificial Banana Plant",
-        "price": 228,
-        "productImage": "https://media.istockphoto.com/id/1372896722/photo/potted-banana-plant-isolated-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=YUsWUtmmiNtJ0AmhT3mC0sgNfcK9c0DPnyoVFnXNChI="
-    },
-    {
-        "id": 5,
-        "productName": "Antique Greek Mable Sculpture",
-        "price": 499,
-        "productImage": "https://media.istockphoto.com/id/1402483459/photo/antique-broken-marble-head-of-a-greek-youth.jpg?b=1&s=170667a&w=0&k=20&c=yIDr7w9rs7E67XHxFF_pfduTS-04BHAzo2FuAgMx5-g="
+        "productImage": "https://media.istockphoto.com/id/1321320075/photo/3d-rendering-of-an-isolated-modern-pale-green-mid-century-cosy-lounge-wingback-armchair.jpg?b=1&s=170667a&w=0&k=20&c=DnhYZHHNh09-MtUA3vLrpV3zqhgJPU1vjOgeRREjsls=",
+        "reviews": [
+            {
+                "id": 7,
+                "star_rating": 5,
+                "title": "I absolutely loved my purchase ",
+                "comment": "Eos alias aut deserunt.",
+                "product_id": 2,
+                "created_at": "2023-03-01T02:19:42.675Z",
+                "updated_at": "2023-03-01T03:17:21.111Z"
+            },
+            {
+                "id": 22,
+                "star_rating": 4,
+                "title": "Quality interior decor items",
+                "comment": "Loved everything i got from this shop",
+                "product_id": 2,
+                "created_at": "2023-03-01T14:42:25.842Z",
+                "updated_at": "2023-03-01T14:42:25.842Z"
+            }
+        ]
     }
 ]
 ```
