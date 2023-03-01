@@ -9,8 +9,13 @@ class ApplicationController < Sinatra::Base
 
     get '/products' do
         products=Product.all
-        products.to_json
+        products.to_json(include: :reviews)
     end
+
+    get '/products/:id' do
+      product=Product.find(params[:id])
+      product.to_json(include: :reviews)
+  end
     #POST
     post '/reviews' do
         review= Review.create(
