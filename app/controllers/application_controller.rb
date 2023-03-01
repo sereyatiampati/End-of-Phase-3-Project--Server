@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
     #GET
     get '/reviews' do
         reviews = Review.all
-        reviews.to_json
+        reviews.to_json(include: :product)
       end
 
     get '/products' do
