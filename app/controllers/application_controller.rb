@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 
     #GET
     get '/reviews' do
-        reviews = Review.all
+        reviews = Review.all # .order("created_at DESC")
         reviews.to_json(include: :product)
       end
 
@@ -16,6 +16,7 @@ class ApplicationController < Sinatra::Base
         review= Review.create(
           star_rating: params[:star_rating],
           comment: params[:comment],
+          title: params[:title],
           product_id: params[:product_id]
         )
         review.to_json
