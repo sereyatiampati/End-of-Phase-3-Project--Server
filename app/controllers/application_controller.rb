@@ -49,6 +49,8 @@ class ApplicationController < Sinatra::Base
     user = User.find_by(params[:email])
     user.to_json(include: [:reviews])
   end
+
+
     #POST
     post '/reviews' do
         review= Review.create(
@@ -89,5 +91,54 @@ class ApplicationController < Sinatra::Base
         review_to_be_deleted.to_json
       end
 
+      #user-controller
+      post '/users' do
+        new_user= User.create(
+          email: params[:email],
+          firstName: params[:firstName],
+          lastName: params[:lastName],
+          password: params[:password]
+        )
+        new_user.to_json
+      end
+
+    get "/users/:email" do
+        user = User.find_by(params[:email])
+        user.to_json(include: [:reviews])
+      end
+
+    get "/users/:id" do
+        User.find_by(id: params[:id]).to_json
+    end
+
+    post '/users' do
+        user = User.create(
+            firstName: params[:firstName], 
+            lastName: params[:lastName],
+            email: params[:email], 
+            password_digest: params[:password]
+            )
+        session[:user_id] = user.id
+        user.to_json
+    end
     
+
+    #Authenticate user login
+    post 'users/login' do
+      user = User.find_by(email: params[:email])
+      if user && user.authenticate(params[:password])
+        session[:user_id] =user.id
+        redirect to "/reviews"
+      else 
+        flash[:error] = "Your credentials are invalid please enter valid details or sign up"
+        redirect to '/login'
+      end
+      user.to_json     
+    end
+
+    #delete user session on logout
+    delete '/users/logout' do
+      session.clear
+      session.to_json
+end
 end

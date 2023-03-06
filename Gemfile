@@ -31,6 +31,10 @@ gem "rake"
 # Provides functionality to interact with a SQLite3 database
 gem "sqlite3"
 
+gem 'sinatra-cors', '~> 1.2'
+
+gem "sinatra-cross_origin", "~> 0.3.1"
+
 # Require all files in a folder
 gem "require_all"
 
