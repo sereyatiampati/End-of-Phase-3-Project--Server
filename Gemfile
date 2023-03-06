@@ -34,6 +34,12 @@ gem "sqlite3"
 # Require all files in a folder
 gem "require_all"
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.18'
+
+gem 'shotgun'
+
+# gem 'pundit'
+# gem "rails"
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"

@@ -2,8 +2,6 @@
 
 This is an API for Interior Design Website. It is a simple web API where you make CRUD calls to a server to organize a interior design app.
 
-[demo here](https://github.com/sereyatiampati/End-of-Phase-3--Project--client)
-
 ## Front-end Interior Design Web App Interface
 
 You can use this API in conjunction with my front-end interor design app [see the repo](https://github.com/sereyatiampati/End-of-Phase-3--Project--client)
@@ -29,10 +27,10 @@ rake db:migrate
 rake db:seed
 
 # start server
-rake server
+shotgun
 ```
 
-Rake server uses port 9292 by default.
+Shotgun uses port 9393 by default.
 
 ## Relationships within Database
 
@@ -63,7 +61,7 @@ Shows you products and all of the reviews associated with the product
 
 ```js
 
-fetch('http://localhost:9292/products')
+fetch('http://localhost:9393/products')
       .then((res) => res.json())
       .then((products) => products)
 
@@ -139,7 +137,7 @@ fetch('http://localhost:9292/products')
 Shows you all reviews associated with the product
 
 ```js
-fetch('http://localhost:9292/product/1')
+fetch('http://localhost:9393/product/1')
       .then((res) => res.json())
       .then((product) => (product))
 
@@ -194,7 +192,7 @@ You can make all CRUD calls for the projects database.
 ### Example: Create a Review
 
 ```js
-fetch('http://localhost:9292/reviews', {
+fetch('http://localhost:9393/reviews', {
         method: 'POST',
         headers: {
              'Content-Type': 'application/json'
@@ -219,7 +217,7 @@ fetch('http://localhost:9292/reviews', {
 ### Example: Delete a Review
 
 ```js
-fetch(`http://localhost:9292/reviews/11`, {
+fetch(`http://localhost:9393/reviews/11`, {
       method: 'DELETE',
     })
 
